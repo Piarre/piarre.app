@@ -4,16 +4,16 @@ export const projectsData: TProject[] = [
   {
     title: "IDEv2",
     description: "👽️ A CLI to fastly initalize new projects ! 📦️",
-    link: [
-      {
-        name: "GitHub",
-        hash: "https://github.com/Piarre/TSMoji",
-      },
-      {
-        name: "Docs",
-        hash: "https://ide.piarre.app",
-      },
-    ],
+    // link: [
+    //   {
+    //     name: "GitHub",
+    //     hash: "https://github.com/Piarre/TSMoji",
+    //   },
+    //   {
+    //     name: "Docs",
+    //     hash: "https://ide.piarre.app",
+    //   },
+    // ],
     tags: ["TypeScript", "Clack", "tsup", "Commander.JS"],
   },
   {

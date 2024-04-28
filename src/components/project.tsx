@@ -19,7 +19,7 @@ const Project = ({ title, description, tags, whatFor, link, image: imageUrl }: T
         <div
           className={clsx(
             // sm:group-even:ml-[18rem]
-            "pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 flex flex-col h-full"
+            "pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 flex flex-col h-full w-full"
             // imageUrl ? "sm:max-w-[60%]" : "sm:max-w-[100%]"
           )}
         >
@@ -32,11 +32,12 @@ const Project = ({ title, description, tags, whatFor, link, image: imageUrl }: T
             {whatFor && (
               <p className="text-md leading-relaxed text-gray-600 dark:text-white/60">{replaceWithEmoji(whatFor)}</p>
             )}
-            
+
             <motion.ul
               animate={{ opacity: isHovered && link ? 0 : 1 }}
+              transition={{ duration: 0.1 }}
               initial={{ opacity: 1 }}
-              className={clsx("flex flex-wrap justify-center gap-3 mt-4 sm:mt-auto group/text transition-opacity")}
+              className={clsx("flex flex-wrap justify-left gap-3 mt-4 sm:mt-auto group/text transition-opacity")}
             >
               {tags.map((tag: any, index: any) => (
                 <li
@@ -51,7 +52,6 @@ const Project = ({ title, description, tags, whatFor, link, image: imageUrl }: T
               ))}
             </motion.ul>
           </div>
-          
         </div>
 
         {imageUrl && (
